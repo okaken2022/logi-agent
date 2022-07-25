@@ -1,0 +1,29 @@
+@use '../global/index' as global;
+.page-title {
+  height: 320px;
+  background-image: url(../images/business/business-title.png);
+  background-position: center;
+}
+
+.page-title__mask {
+  height: 320px;
+  background-color: rgb(28, 39, 67, 0.46);
+}
+
+.page__title {
+  text-align: center;
+  align-items: center;
+}
+
+.page__title--en {
+  padding-top: 120px;
+  color: rgb(168, 167,167, 0.5);
+}
+.page__title--ja {
+  top: 66%;
+  color: global.$white;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    top: 72%
+  }
+}

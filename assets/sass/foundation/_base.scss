@@ -1,0 +1,25 @@
+@use '../global/index' as global;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: global.$default-font-family;
+  font-size: 1.2rem;
+  line-height: global.$default-line-height;
+  color: global.$black;
+}
+
+// a {
+//   transition: all 0.5s;
+//   &:hover {
+//       opacity: 0.8;
+//   }
+// }
+
+img {
+  width: 100%;
+}
+
+

@@ -1,0 +1,33 @@
+/*==============================
+MEDIA QUERY
+0 - 600px:  sp
+600- 767px: s-tab
+768- 1139px:  pc-small
+1140px -    : pc
+==============================*/
+@mixin mq($breakpoint) {
+  @if $breakpoint == sp {
+    @media only screen and (max-width: 599px) {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == tab {
+    @media only screen and (max-width: 959px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == pc {
+    @media only screen and (max-width: 1140px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+

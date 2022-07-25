@@ -1,0 +1,7 @@
+AuthUserFile /home/c8954429/public_html/okaken2022.conohawing.com/logi-agent/.htpasswd
+AuthName "password"
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>

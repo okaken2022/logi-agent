@@ -1,0 +1,431 @@
+@use './global/index' as global;
+
+// ------------------------------------------------
+// business-about
+// ------------------------------------------------
+.business-about {
+  margin: 120px auto 140px;
+  font-family: global.$second-font-family;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 0 20px;
+    margin-top: 60px;
+  }
+}
+
+.business-about__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.business-about__text {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  max-width: 928px;
+  margin: 0 auto;
+  span {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
+// ------------------------------------------------
+// business-section common
+// ------------------------------------------------
+.business-section__content {
+  font-family: global.$second-font-family;
+  display: flex;
+  width: 100%;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+}
+
+.business-section__text-part {
+  width: 50%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.business-section__head {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.business-section__lead1 {
+  margin-bottom: 20px;
+}
+
+
+// ------------------------------------------------
+// network
+// ------------------------------------------------
+.network {
+  width: 100%;
+  position: relative;
+  margin-bottom: 180px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -85px;
+    bottom: -90px;
+    left: 0;
+    right: 0;
+    background-color: #F4F4F4;
+    transform: skewY(-4deg);
+    z-index: -1;
+  }
+}
+
+.network__text-part {
+  padding-right: 32px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 20px;
+  }
+}
+
+
+// ------------------------------------------------
+// manual
+// ------------------------------------------------
+.manual {
+  width: 100%;
+  margin-bottom: 180px;
+}
+.manual__content {
+  flex-direction: row-reverse;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+}
+
+.manual__text-part {
+  padding-left: 32px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 20px;
+  }
+}
+
+
+// ------------------------------------------------
+// anytime
+// ------------------------------------------------
+.anytime {
+  width: 100%;
+  position: relative;
+  margin-bottom: 180px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -85px;
+    bottom: -90px;
+    left: 0;
+    right: 0;
+    background-color: #F4F4F4;
+    transform: skewY(-4deg);
+    z-index: -1;
+  }
+}
+
+.anytime__text-part {
+  padding-right: 32px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 20px;
+  }
+}
+
+// ------------------------------------------------
+// アコーディオンのためのCSS
+// ------------------------------------------------
+
+.service__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: 96%;
+  max-width: 1088px;
+  margin:0 auto 80px;
+}
+
+.accordion-area li{
+  margin: 24px 0;
+  scroll-behavior: smooth;
+}
+
+.accordion-area section {
+  background-color: global.$red;
+  color: global.$white;
+
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;/*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 16px 0;
+  transition: all .5s ease;
+  text-align: center;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+  position: absolute;
+  content:'';
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+  
+}
+.title::before{
+  top:48%;
+  left: 15px;
+  transform: rotate(0deg);
+  
+}
+.title::after{    
+  top:48%;
+  left: 15px;
+  transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::before{
+transform: rotate(45deg);
+}
+
+.title.close::after{
+transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+  display: none;/*はじめは非表示*/
+  background: #F4F4F4;
+  color: global.$black;
+  font-family: global.$second-font-family;
+  padding: 72px 80px;
+  @include global.mq(sp) {
+    padding: 36px 20px;
+  }
+}
+
+// ------------------------------------------------
+//　サービス内容
+// ------------------------------------------------ 
+.service-contents {
+  display: flex;
+  width: 100%;
+  margin-bottom: 48px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    flex-direction: column;
+  }
+}
+
+.service-contents__text-part {
+  width: 50%;
+  margin-right: 32px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    width: 100%;
+  }
+}
+
+.service-contents__text-head {
+  font-size: 2.6rem;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  line-height: 0;
+  align-items: center;
+  span img {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+    margin-right: 24px;
+  }
+}
+
+.service-contents__text-head-line {
+  margin-bottom: 40px;
+}
+
+.service-contents__text {
+  font-size: 1.6rem;
+  line-height: 2;
+  margin-bottom: 32px;
+  &:nth-of-type(2) {
+    margin-bottom: 0;
+  // <!-- sp style -->
+    @include global.mq(sp) {
+    margin-bottom: 40px;
+    }
+  }
+}
+
+
+// ------------------------------------------------
+//　こんなときご利用ください
+// ------------------------------------------------ 
+.use {
+  border: solid 1px global.$black;
+  padding: 40px 10px 56px;
+  margin-bottom: 48px;
+}
+.use__text-head {
+  font-size: 2.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1;
+}
+
+.use__list {
+  max-width: 424px;
+  margin: 0 auto;
+}
+.use__item {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 24px;
+  span img {
+    vertical-align: inherit;
+    width: 16px;
+    margin-right: 24px;
+  }
+}
+
+
+// ------------------------------------------------
+//　配送できる品目
+// ------------------------------------------------ 
+.goods__text-head {
+  font-size: 2.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.goods__list {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+  justify-content: center;
+  }
+}
+
+.goods__item {
+  text-align: center;
+}
+
+.goods__name {
+  margin-top: 4px;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: bold;
+}
+
+
+// ------------------------------------------------
+//　責任者よりコメント
+// ------------------------------------------------ 
+.service-contents--comment {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    flex-direction: column;
+  }
+}
+
+.service-contents__text-part--comment {
+  margin-right: 0;
+  margin-left: 32px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    margin-left: 0;
+  }
+}
+
+// ------------------------------------------------
+//  service-button
+// ------------------------------------------------ 
+
+.service-button {
+  max-width: 788px;
+  margin: 0 auto;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 0 10px;
+  }
+}
+
+.service-button__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    flex-direction: column;
+  }
+}
+.service-button__list2 {
+  @extend .service-button__list;
+  max-width: 515px;
+  margin: 0 auto;
+}
+
+.service-button__item {
+  width: 240px;
+  height: 56px;
+  border: solid 1px global.$red;
+  background-color: global.$white;
+  color: global.$red;
+  font-size: 1.8rem;
+  font-weight: medium;
+  margin-bottom: 32px;
+  line-height: 56px;
+  @include global.mq(sp) {
+    margin: 0 auto 32px;
+  }
+}
+
+

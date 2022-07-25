@@ -1,0 +1,58 @@
+@use '../global/index' as global;
+
+.c-more-info-button {
+  display: block;
+  width: 320px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 20px 64px 20px 100px;
+  background-color: global.$red;
+  color: global.$white;
+  font-family: global.$second-font-family;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  align-items: center;
+  transition: all .2s;
+  &:hover {
+    opacity: .8;
+  }
+
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 56px;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px global.$white;
+    border-right: solid 2px global.$white;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+  }
+}
+
+
+.arrow.arrow-right::before {
+  transform: rotate(45deg);
+}
+
+
+.arrow--business {
+  @extend .arrow;
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px global.$red;
+    border-right: solid 2px global.$red;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+  }
+}

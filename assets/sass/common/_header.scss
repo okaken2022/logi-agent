@@ -1,0 +1,54 @@
+@use '../global/index' as global;
+.header {
+  width: 100%;
+  background-color: global.$white;
+  border-bottom: 6px solid global.$lightgray;
+  z-index: 10;
+  position: absolute;
+
+
+
+}
+.wrapper-w1187__header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    height: 60px;
+  }
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  font-size: 2.0rem;
+}
+
+.header__item {
+  font-family: global.$second-font-family;
+  margin-left: 40px;
+}
+
+.header-contact__button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: global.$red;
+  color: global.$white;
+  margin-left: 40px;
+  align-items: center;
+  span {
+    margin-left: 16px;
+  }
+  img {
+    width: 19px;
+    height: 13px;
+  }
+}
+
+.header--other {
+  position: inherit;
+}

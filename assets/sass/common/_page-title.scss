@@ -1,8 +1,8 @@
 @use '../global/index' as global;
 .page-title {
   height: 320px;
-  background-image: url(../images/business/business-title.png);
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page-title__mask {
@@ -26,4 +26,24 @@
   @include global.mq(sp) {
     top: 72%
   }
+}
+
+.page-title--business {
+  @extend .page-title;
+  background-image: url(../images/business/business-title.png);
+}
+
+.page-title--company {
+  @extend .page-title;
+  background-image: url(../images/company/company-title.png);
+}
+
+.page-title--jobinfo {
+  @extend .page-title;
+  background-image: url(../images/jobinfo/job-infotitle.png);
+}
+
+.page-title--news {
+  @extend .page-title;
+  background-image: url(../images/news/news-title.png);
 }

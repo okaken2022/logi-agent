@@ -1,0 +1,10 @@
+@use '../global/index' as global;
+
+.cat--item {
+  padding: 2px 16px;
+  background: #000;
+  background: #0071FF;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}

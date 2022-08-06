@@ -1,0 +1,38 @@
+@use '../global/index' as global;
+
+.recruit-title__head {
+  position: relative;
+  font-size: 4.3rem;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-align: center;
+  h3 {
+    display: inline-block;
+    padding: 0 35px;
+    background-color: global.$white;
+  }
+  
+  ::before{
+    z-index: -1;
+    content:"";
+    display:inline-block;
+    width:500px;
+    height:3px;
+    background-color: global.$black;
+    position:absolute;
+    top: 30px;
+    left:-5px;
+  }
+  ::after{
+    z-index: -1;
+    content:"";
+    display:inline-block;
+    width:500px;
+    height:3px;
+    background-color: global.$black;
+    position:absolute;
+    top: 30px;
+    right:-5px;
+  }
+}

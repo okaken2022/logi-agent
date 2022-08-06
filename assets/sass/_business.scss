@@ -61,6 +61,12 @@
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 40px;
+  position: relative;
+  img {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+  }
 }
 
 .business-section__lead1 {
@@ -74,19 +80,10 @@
 .network {
   width: 100%;
   position: relative;
-  margin-bottom: 180px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -85px;
-    bottom: -90px;
-    left: 0;
-    right: 0;
-    background-color: #F4F4F4;
-    transform: skewY(-4deg);
-    z-index: -1;
-  }
+  margin-bottom: 120px;
+  background-color: #F4F4F4;
+  padding: 120px 0;
+  z-index: -10;
 }
 
 .network__text-part {
@@ -97,13 +94,19 @@
   }
 }
 
+.network__head {
+  img {
+    width: 494px;
+  }
+}
+
 
 // ------------------------------------------------
 // manual
 // ------------------------------------------------
 .manual {
   width: 100%;
-  margin-bottom: 180px;
+  margin-bottom: 120px;
 }
 .manual__content {
   flex-direction: row-reverse;
@@ -122,6 +125,12 @@
   }
 }
 
+.manual__head {
+  img {
+    width: 340px;
+  }
+}
+
 
 // ------------------------------------------------
 // anytime
@@ -129,19 +138,10 @@
 .anytime {
   width: 100%;
   position: relative;
-  margin-bottom: 180px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -85px;
-    bottom: -90px;
-    left: 0;
-    right: 0;
-    background-color: #F4F4F4;
-    transform: skewY(-4deg);
-    z-index: -1;
-  }
+  margin-bottom: 120px;
+  background-color: #F4F4F4;
+  padding: 120px 0;
+  z-index: -10;
 }
 
 .anytime__text-part {
@@ -149,6 +149,12 @@
   // <!-- sp style -->
   @include global.mq(sp) {
     padding: 20px;
+  }
+}
+
+.anytime__head {
+  img {
+    width: 494px;
   }
 }
 
@@ -193,40 +199,50 @@
   padding: 16px 0;
   transition: all .5s ease;
   text-align: center;
+  position: relative;
 }
 
-/*アイコンの＋と×*/
-.title::before,
-.title::after{
+.accordion-arrow {
   position: absolute;
-  content:'';
-  width: 15px;
-  height: 2px;
-  background-color: #333;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: solid 2px global.$white;
+  border-radius: 24px;
+  top: 25px;
+  right: 32px;
+  /*アイコンの＋と×*/
+  &::before,
+  &::after{
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+  }
+  &::before{
+    top: 42%;
+    left: 8px;
+    transform: rotate(40deg);
+    
+  }
+  &::after{    
+    top: 42%;
+    left: 3px;
+    transform: rotate(140deg);
+
+  }
+  
+  /*　closeというクラスがついたら形状変化　*/
+  
+  &.close {
+  transform: rotate(180deg);
+  }
   
 }
-.title::before{
-  top:48%;
-  left: 15px;
-  transform: rotate(0deg);
-  
-}
-.title::after{    
-  top:48%;
-  left: 15px;
-  transform: rotate(90deg);
 
-}
 
-/*　closeというクラスがついたら形状変化　*/
-
-.title.close::before{
-transform: rotate(45deg);
-}
-
-.title.close::after{
-transform: rotate(-45deg);
-}
 
 /*アコーディオンで現れるエリア*/
 .box {
@@ -364,7 +380,7 @@ transform: rotate(-45deg);
 
 
 // ------------------------------------------------
-//　責任者よりコメント
+// 責任者よりコメント
 // ------------------------------------------------ 
 .service-contents--comment {
   display: flex;
@@ -385,13 +401,58 @@ transform: rotate(-45deg);
   }
 }
 
+
+// ------------------------------------------------
+// その他サービス
+// ------------------------------------------------ 
+.another-service {
+  display: none;/*はじめは非表示*/
+  background: #F4F4F4;
+  color: global.$black;
+  font-family: global.$second-font-family;
+  padding: 53px 40px 76px;
+  @include global.mq(sp) {
+    padding: 36px 20px;
+  }
+}
+
+.another-service__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include global.mq(tab) {
+    justify-content: center;
+  }
+}
+.another-service__item {
+  margin-bottom: 52px;
+}
+.another-service__img {
+  margin-bottom: 24px;
+}
+.another-service__text {
+  max-width: 416px;
+  margin: 0 auto;
+}
+.another-service__head {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.another-service__lead {
+  font-size: 16px;
+  font-weight: medium;
+  line-height: 2;
+}
+
 // ------------------------------------------------
 //  service-button
 // ------------------------------------------------ 
 
 .service-button {
   max-width: 788px;
-  margin: 0 auto;
+  margin: 0 auto 192px;
   // <!-- sp style -->
   @include global.mq(sp) {
     padding: 0 10px;
@@ -414,6 +475,7 @@ transform: rotate(-45deg);
 }
 
 .service-button__item {
+  position: relative;
   width: 240px;
   height: 56px;
   border: solid 1px global.$red;
@@ -422,9 +484,32 @@ transform: rotate(-45deg);
   font-size: 1.8rem;
   font-weight: medium;
   margin-bottom: 32px;
-  line-height: 56px;
+  padding: 15px 32px;
+  line-height: 1.5;
   @include global.mq(sp) {
     margin: 0 auto 32px;
+  }
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.arrow--business {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 56px;
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px global.$red;
+    border-right: solid 2px global.$red;
+    position: absolute;
+    right: 32px;
+    top: 22px;
+    transform: rotate(45deg);
   }
 }
 

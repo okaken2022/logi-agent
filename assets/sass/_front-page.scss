@@ -8,11 +8,11 @@
 
 .swiper {
   width: 100%;
-  height: 768px;
+  height: 644px;
   margin: 0 auto;
   // <!-- sp style -->
   @include global.mq(sp) {
-    height: 400px;
+    height: 350px;
   }
 }
 
@@ -21,6 +21,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -49,11 +50,18 @@ span.swiper-pagination-bullet-active {
 // ページネーションの位置
 div.swiper-pagination {
   text-align: right;
+  // <!-- sp style -->
   @include global.mq(sp) {
     display: none;
   }
 }
 
+.swiper-button-next {
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    display: none;
+  }
+}
 
 // -------------------fv-nav------------------ 
 
@@ -66,7 +74,7 @@ div.swiper-pagination {
   height: 642px;
   z-index: 10;
   position: absolute;
-  top: 126px;
+  top: 0px;
   background-color: rgba(0, 0, 0, 0.5);
   color: global.$white;
   // <!-- sp style -->
@@ -90,6 +98,7 @@ div.swiper-pagination {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    white-space: nowrap;
     padding: 50px 72px 47px 56px;
     width: 448px;
 
@@ -103,6 +112,7 @@ div.swiper-pagination {
     @include global.mq(sp) {
       font-size: 2.4rem;
       padding: 25px 36px 25px 24px;
+      width: auto;
     }
   }
 }
@@ -127,13 +137,30 @@ div.swiper-pagination {
 
 // -------------------fv-catch------------------ 
 .wrapper-w1187__fv {
-  text-align: right;
   position: relative;
+
 }
+
+// -------------------fv-catch スライド------------------ 
+.fv__catch {  
+  position: absolute;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: 0px;
+  text-align: left;
+  display: none;
+  position: relative;
+  text-align: right;
+  &.current {
+    display: block;
+  }
+}
+
 
 
 // ------------------spレスポンシブにおけるcatchの表示、非表示--------------------
 .fv__catch {
+
   // <!-- sp style -->
   @include global.mq(sp) {
     display: none;
@@ -153,7 +180,6 @@ div.swiper-pagination {
   z-index: 10;
   position: absolute;
   bottom:  226px;
-  right: 0;
   color: global.$red;
 
   // <!-- tab style -->
@@ -198,7 +224,7 @@ div.swiper-pagination {
   z-index: 10;
   position: absolute;
   bottom: 80px;
-  right: 0;
+  // right: 0;
 
   // <!-- sp style -->
   @include global.mq(sp) {
@@ -239,101 +265,24 @@ div.swiper-pagination {
 // ------------------------------------------------
 .job-info {
   width: 100%;
-  position: relative;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    top: -160px;
-    bottom: -60px;
-    left: 0;
-    right: 0;
-    background-color: #F4F4F4;
-    transform: skewY(-4deg);
-    z-index: -1;
-  }
+  background-color: #F4F4F4;
+  padding: 80px 0;
 }
 
 .job-info__title {
-  margin-top: 80px;
   margin-bottom: 40px;
   text-align: center;
-}
-
-.job-info__list {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-  // <!-- tab style -->
-  @include global.mq(tab) {
-    justify-content: space-evenly;
-    margin-bottom: 40px;
-  }
-}
-
-.job-info__card {
-  width: 332px;
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: global.$white;
-  border: solid 1px global.$card-border-gray;
-  // <!-- tab style -->
-  @include global.mq(tab) {
-    margin-bottom: 40px;
-  }
-}
-
-.job-info-card__img {
-  width: 97px;
-  height: 97px;
-  border: solid 1px global.$red;
-}
-
-.job-info-card__text-part {
-  width: 198px;
-  text-align: left;
-  margin-top: 2px;
-}
-
-.job-info-card-text-part__title {
-  font-family: global.$second-font-family;
-  font-size: 1.8rem;
-  color: global.$lightblue;
-  margin-bottom: 32px;
-}
-
-.job-info-card-text-part__detail {
-  width: 160px;
-  font-size: 1.4rem;
-  margin-bottom: 45px;
-}
-
-.job-info-card-text-part__button {
-  width: 189px;
-  text-align: center;
-  display: block;
-  background-color: global.$white;
-  color: global.$red;
-  padding: 10px 52px 8px;
-  border: solid 1px global.$red;
-}
-
-.job-info__more-info-button {
-  margin-bottom: 120px;
 }
 
 // ------------------------------------------------
 // business
 // ------------------------------------------------
 .business {
-  margin-bottom: 160px;
+  width: 100%;
+  padding: 80px 0;
   // <!-- sp style -->
   @include global.mq(sp) {
-    padding: 0 10px;
-    margin-bottom: 120px;
+    padding: 80px 10px;
   }
 }
 
@@ -393,30 +342,11 @@ div.swiper-pagination {
 // ------------------------------------------------
 .recruit {
   width: 100%;
-  position: relative;
-  margin-bottom: 240px;
-  &::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    bottom: -120px;
-    left: 0;
-    right: 0;
-    background-color: #F4F4F4;
-    transform: skewY(-4deg);
-    z-index: -1;
-
-    // <!-- sp style -->
-    @include global.mq(sp) {
-      top: -60px;
-      bottom: -60px;
-    }
-  }
-
+  background-color: #F4F4F4;
+  padding: 80px 0;
   // <!-- sp style -->
   @include global.mq(sp) {
-    padding: 0 10px;
-    margin-bottom: 120px;
+    padding: 80px 10px;
   }
 }
 
@@ -483,12 +413,10 @@ div.swiper-pagination {
 // ------------------------------------------------
 .company {
   width: 100%;
-  margin-bottom: 160px;
-
+  padding: 80px 0;
   // <!-- sp style -->
   @include global.mq(sp) {
-    padding: 0 10px;
-    margin-bottom: 120px;
+    padding: 80px 10px;
   }
 }
 
@@ -510,12 +438,9 @@ div.swiper-pagination {
   }
 }
 .company__text-part {
-  width: 536px;
+  max-width: 536px;
   // <!-- sp style -->
-  @include global.mq(sp) {
-    margin: 0 auto ;
-    width: 400px;
-  }
+
 }
 
 .company__img {
@@ -551,24 +476,9 @@ div.swiper-pagination {
 
 .news {
   width: 100%;
-  position: relative;
-  margin-bottom: 80px;
-  &::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    bottom: -130px;
-    left: 0;
-    right: 0;
-    background-color: #F4F4F4;
-    transform: skewY(-4deg);
-    z-index: -1;
-  }
-
-  // <!-- sp style -->
-  @include global.mq(sp) {
-    padding: 0 10px;
-  }
+  width: 100%;
+  background-color: #F4F4F4;
+  padding: 80px 0;
 }
 
 .news__title {
@@ -599,13 +509,19 @@ div.swiper-pagination {
   border-bottom: 1px solid #d5d5d5;
   height: calc(100% / 3);
   padding: 30px 20px 5px 20px;
+  align-items: center;
   &:nth-child(3) {
     border-bottom: none;
   }
-
+  .cat--item {
+    white-space: nowrap;
+    display: block;
+    height: 28px;
+    margin-right: 16px;
+  }
   time {
     color: #B3B3B3;
-    margin-right: 62px;
+    margin-right: 16px;
   }
   h3 {
     display: -webkit-box;
@@ -639,14 +555,40 @@ div.swiper-pagination {
 }
 
 .main-cta__heading {
+  position: relative;
   font-weight: bold;
   font-size: 2.8rem;
   margin-bottom: 24px;
   line-height: 1.4;
+  img {
+    position: absolute;
+    width: 494px;
+    top: 10px;
+  // <!-- tab style -->
+  @include global.mq(sp) {
+    top: 50px;
+    width: 350px;
+    }
+  }
+  h3 {
+    position: absolute;
+    z-index: 10;
+    br {
+      display: none;
+        // <!-- tab style -->
+    @include global.mq(sp) {
+      display: block;
+      }
+    }
+  }
 }
 
 .main-cta__lead {
+  margin-top: 80px;
   margin-bottom: 40px;
+  @include global.mq(sp) {
+    margin-top: 100px;
+  }
 }
 
 .more-info-button--cta {
@@ -658,7 +600,7 @@ div.swiper-pagination {
   .arrow-cta {
     margin-left: 4px;
   }
-
+  // <!-- tab style -->
   @include global.mq(tab) {
     margin: 0 auto;
   }
@@ -666,97 +608,40 @@ div.swiper-pagination {
 .main-cta__contact-text {
   margin-bottom: 14px;
   line-height: 1.2;
+    // <!-- tab style -->
+    @include global.mq(tab) {
+      text-align: center;
+    }
 }
 
 .main-cta__contact-unit {
+  display: flex;
   font-size: 2.4rem;
   color: #008496;
   letter-spacing: 0.1em;
   line-height: 1;
+  a {
+    display: block;
+  }
   img {
     height: 24px;
     width: 24px;
     vertical-align: bottom;
     margin-right: 8px;
   }
+    // <!-- tab style -->
+  @include global.mq(tab) {
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 .main-cta__fax {
   margin-left: 40px;
+    // <!-- tab style -->
+    @include global.mq(tab) {
+      margin-left: 0;
+      margin-top: 8px;
+    }
 }
 
- // ------------------------------------------------
-// footer
-// -------------------------------------------------
-.footer-top {
-  width: 100%;
-  background-color: #D2D4DA;
-  font-family: global.$second-font-family;
-}
-
-.wrapper__footer {
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__logo-part {
-  font-size: 1.3rem;
-  font-weight: medium;
-}
-
-.footer__logo {
-  margin-bottom: 16px;
-}
-
-.footer__address {
-  margin-bottom: 16px;
-}
-
-.footer-nav {
-  display: flex;
-}
-
-.footer-nav__col {
-  margin-left: 52px;
-}
-
-.footer-nav__head {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 16px;
-  display: block;
-}
-
-.footer-nav__list {
-  border-left: 1px solid #A9A9A9;
-}
-
-.footer-nav__item {
-  margin-left: 16px;
-  margin-bottom: 12px;
-}
-
-.footer-nav__sns-links {
-  display: flex;
-}
-
-
-.footer-nav__agreement {
-  font-size: 1.3rem;
-  margin-top: 40px;
-  margin-bottom: 23px;
-  display: block;
-}
-.footer-nav__sns-item {
-  margin-right: 24px;
-  font-size: 2rem;
-}
-
-.footer-bottom {
-  height: 40px;
-  background-color: #ABB7BF;
-  color: #7E7E7E;
-  line-height: 40px;
-  text-align: center;
-}

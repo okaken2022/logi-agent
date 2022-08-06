@@ -1,0 +1,1075 @@
+@use './global/index' as global;
+
+// ------------------------------------------------
+// recruit-fv
+// ------------------------------------------------
+.recruit-fv {
+  width: 100%;
+  height: 739px;
+  position: relative;
+  // <!-- tab style -->
+  @include global.mq(tab) {
+    height: 900px;
+  }
+}
+
+.recruit__filter {
+  height: 740px;
+  object-fit: cover;
+  // <!-- tab style -->
+  @include global.mq(tab) {
+    height: 400px;
+    object-position: 70%;
+    padding-top: 60px;
+  }
+}
+
+.recruit-fv__container {
+  position: absolute;
+  z-index: 10;
+  max-width: 720px;
+  top: 160px;
+  // <!-- tab style -->
+  @include global.mq(tab) {
+    width: 100%;
+    top: 420px;
+    padding: 0 10px;
+  }
+}
+.recruit-fv__catch {
+  width: 398px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto 32px;
+  padding: 16px 0 20px;
+  img {
+    width: 97px;
+      // <!-- sp style -->
+      @include global.mq(tab) {
+        width: 80px;
+      }
+  }
+  border-top: solid 1px #260B06; 
+  border-bottom: solid 1px #260B06;
+    // <!-- tab style -->
+  @include global.mq(tab) {
+    width: 350px;
+  }
+}
+
+.recruit-fv__text-part {
+  font-weight: bold;
+  
+  color: #260B06;
+  line-height: 1.3;
+}
+.recruit-fv__text1 {
+  font-size: 3.0rem;
+  letter-spacing: -0.04em;
+    // <!-- sp style -->
+  @include global.mq(tab) {
+    font-size: 2.7rem;
+  }
+
+}
+.recruit-fv__text2 {
+  font-size: 4.0rem;
+  letter-spacing: 0.26em;
+    // <!-- sp style -->
+  @include global.mq(tab) {
+    font-size: 3.4rem;
+  }
+}
+
+.recruit-fv__driver {
+  width: 100%;
+  height: 112px;
+  font-size: 7.8rem;
+  line-height: 112px;
+  background-color: #260B06;
+  color: global.$white;
+  margin-bottom: 8px;
+    // <!-- tab style -->
+  @include global.mq(tab) {
+    width: 380px;
+    font-size: 4.2rem;
+    margin: 0 auto 8px;
+  }
+}
+
+.recruit-fv__note {
+  width: 100%;
+  height: 27px;
+  font-size: 1.4rem;
+  line-height: 27px;;
+  text-align: center;
+  border-top: solid 1px #260B06; 
+  border-bottom: solid 1px #260B06; 
+  margin-bottom: 32px;
+}
+
+.recruit-fv__list {
+  max-width: 560px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.recruit-fv__item {
+  width: 144px;
+  height: 144px;
+  border-radius: 100px;
+  background-color: global.$lightblue;
+  color: global.$white;
+  font-family: global.$recruit-item-font-family;
+  font-size: 1.7rem;
+  line-height: 1.66;
+  box-shadow: 0 3px 6px #000000;
+  text-align: center;
+  vertical-align: middle;
+  padding: 45px 0;
+  span {
+    color: global.$yellow;
+  }
+    // <!-- tab style -->
+    @include global.mq(tab) {
+      width: 120px;
+      height: 120px;
+      font-size: 1.6rem;
+      line-height: 1.3;
+      padding: 40px 0;
+    }
+}
+
+// ------------------------------------------------
+// recruit-cta
+// ------------------------------------------------
+.recruit-cta {
+  width: 100%;
+  background-color: global.$lightblue;
+  padding: 40px 0;
+  font-family: global.$second-font-family;
+  text-align: center;
+}
+
+.recruit-cta__intro {
+  font-size: 2.0rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.recruit-cta__catch {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  font-weight: bold;
+  color: global.$white;
+  margin-bottom: 40px;
+  .respond {
+    display: none;
+    // <!-- sp style -->
+    @include global.mq(sp) {
+      display: block;
+    }
+  }
+}
+.recruit-cta__note {
+  font-size: 1.4rem;
+  font-weight: medium;
+  line-height: 1.4;
+  color: global.$yellow;
+  margin-bottom: 8px;
+}
+
+// ------------------------------------------------
+// recruit-video
+// ------------------------------------------------
+.recruit-video {
+  padding: 80px 0 120px;
+}
+.recruit-video_head {
+  font-family: global.$second-font-family;
+  font-size: 2.6rem;
+  line-height: 1.4;
+  color: global.$lightblue;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.recruit-video__video {
+  width: 928px;
+  height: 464px;
+  border: solid 1px red;
+  margin: 0 auto;
+}
+
+// ------------------------------------------------
+// worries
+// ------------------------------------------------
+// .recruit-worries {
+//   background-color: global.$background-gray;
+//   font-family: global.$second-font-family;
+//   position: relative;
+//   height: 798px;
+//   padding: 88px 0;
+// }
+
+// .recruit-worries__title {
+//   width: 240px;
+//   text-align: center;
+//   line-height: 1;
+//   margin: 0 auto 32px;
+// }
+// .recruit-worries__text {
+//   font-size: 2.6rem;
+//   font-weight: medium;
+
+// }
+// .recruit-worries__head {
+//   font-size: 4.3rem;
+//   letter-spacing: 0.1em;
+//   line-height: 1.4;
+//   font-weight: bold;
+//   position: relative;
+//   z-index: 2;
+//   span img {
+//     width: 232px;
+//     position: absolute;
+//     z-index: -1;
+//     bottom: -10px;
+//     left: 0;
+//   }
+// }
+
+// .recruit-worries__img {
+//   margin: 0 auto;
+//   width: 448px;
+// }
+
+// ------------------------------------------------
+// merit
+// ------------------------------------------------
+.merit {
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 0 20px;
+  }
+}
+.merit-catch {
+  width: 100%;
+  height: 260px;
+  padding: 84px 0;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
+  background-color: global.$lightblue;
+  font-family: global.$second-font-family;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 120px;
+
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 40px 0;
+  }
+}
+
+.merit-catch__head {
+  font-size: 3.2rem;
+  color: global.$yellow;
+  margin-bottom: 8px;
+}
+
+.merit-catch__lead {
+  font-size: 2.6rem;
+  color: global.$white;
+}
+
+.merit-title {
+  text-align: center;
+}
+
+.merit-title__baloon {
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: light;
+  color: global.$white;
+  background-color: global.$black;
+  width: 192px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 2px;
+  margin: 0 auto 8px;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 25px;
+    left: 90px;
+    border: 6px solid transparent;
+    border-top: 5px solid global.$black;
+  }
+}
+
+// .merit-title__head {
+//   position: relative;
+//   font-size: 4.3rem;
+//   font-weight: bold;
+//   line-height: 1.4;
+//   letter-spacing: 0.1em;
+//   p {
+//     display: inline-block;
+//     padding: 0 35px;
+//     background-color: global.$white;
+//   }
+  
+//   ::before{
+//     z-index: -1;
+//     content:"";
+//     display:inline-block;
+//     width:370px;
+//     height:3px;
+//     background-color: global.$black;
+//     position:absolute;
+//     top: 30px;
+//     left:-5px;
+//   }
+//   ::after{
+//     z-index: -1;
+//     content:"";
+//     display:inline-block;
+//     width:370px;
+//     height:3px;
+//     background-color: global.$black;
+//     position:absolute;
+//     top: 30px;
+//     right:-5px;
+//   }
+// }
+
+.merit-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: global.$second-font-family;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    justify-content: center;
+    }
+}
+
+.merit-list__item {
+  width: 544px;
+  height: 605px;
+  padding: 35px 32px 4px;
+  margin-bottom: 36px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 35px 10px 4px;
+  }
+}
+
+.merit-item__title {
+  justify-content: center;
+  display: flex;
+}
+
+.merit-item__title-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.merit-item__title-text {
+  position: relative;
+  img {
+    padding: 8px 0 0 4px;
+    width: 127px;
+  }
+  p {
+    top: 5px;
+    left: 9px;
+    position: absolute;
+    font-size: 1.8rem;
+  }
+  span {
+    font-size: 2.6rem;
+    margin-left: 8px;
+  }
+  margin-bottom: 13px;
+}
+
+.merit-item__head {
+  font-size: 2.6rem;
+  font-weight: medium;
+  line-height: 1.42;
+  color: global.$lightblue;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.merit-item__img {
+  img {
+    max-width: 480px;
+  }
+  margin-bottom: 40px;
+}
+
+.merit-item__text {
+  font-size: 1.8rem;
+  font-weight: medium;
+  line-height: 1.55;
+}
+
+.merit-list__item--5 {
+  width: 100%;
+  margin-bottom: 120px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    margin-bottom: 320px;
+  }
+}
+
+.merit-item__movie {
+  width: 480px;
+  height: 240px;
+  border: solid 1px red;
+  margin: 0 auto 40px;
+}
+
+// ------------------------------------------------
+// interview
+// ------------------------------------------------
+.interview {
+  font-family: global.$second-font-family;
+}
+.interview__title {
+  margin-bottom: 16px;
+}
+
+.interview__lead {
+  text-align: center;
+  font-size: 2.6rem;
+  position: relative;
+  img {
+    z-index: -1;
+    position:absolute;
+    width: 164px;
+  }
+  margin-bottom: 64px;
+}
+
+.interview__item {
+  padding: 0 20px 0 16px;
+  margin-bottom: 80px;
+}
+
+.interview__balloon {
+  position: relative;
+  max-width: 1048px;
+  height: 71px;
+  padding: 20px 32px;
+  background-color: global.$background-gray;
+  border-radius: 24px;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.16);
+
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 10px 16px;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    top: 56px;
+    left: 57px;
+    border: 14px solid transparent;
+    border-top: 10px  solid global.$background-gray;
+    transform: rotate(-145deg);
+  }
+  p {
+    color: global.$lightblue;
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: medium;
+  }
+  margin-bottom: 35px;
+}
+
+.interview__content {
+  display: flex;
+  align-items: center;
+// <!-- sp style -->
+@include global.mq(sp) {
+  flex-direction: column;
+  }
+}
+
+.interview__img {
+  img {
+    margin-right: 32px;
+    width: 328px;
+  @include global.mq(sp) {
+    width: 164px;
+    margin-right: 0;
+    margin-bottom: 16px;
+    }
+  }
+}
+
+.interview__name {
+  font-size: 1.8rem;
+  font-weight: Medium;
+  padding-bottom: 16px;
+  border-bottom: dashed 1px #646464;
+  margin-bottom: 32px;
+}
+
+.interview__text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+
+// ------------------------------------------------
+// income
+// ------------------------------------------------
+.income {
+  font-family: global.$second-font-family;
+}
+.income__title {
+  margin-bottom: 16px;
+}
+
+.income__lead {
+  text-align: center;
+  font-size: 2.6rem;
+  position: relative;
+  img {
+    z-index: -1;
+    position:absolute;
+    width: 256px;
+  }
+  margin-bottom: 12px;
+}
+
+.income__lead2 {
+  font-size: 1.6rem;
+  color: global.$red;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.income__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+  justify-content: center;
+  }
+}
+.income__item {
+  position:relative;
+  width: 330px;
+  height: 370px;
+  padding: 92px 0 40px;
+  border: solid 3px global.$black;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.income-item__img {
+  position:absolute;
+  width: 104px;
+  top: -55px;
+  left: 110px;
+}
+
+.income__length {
+  font-size: 1.8rem;
+  font-weight: medium;
+  span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  margin-bottom: 8px;
+}
+
+.income__position {
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+}
+
+.income__monthly-income {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: global.$lightblue;
+  strong {
+    font-family: global.$number-font-family;
+    font-size: 4.9rem;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    margin-left: 24px;
+    margin-right: 16px;
+  }
+  margin-bottom: 32px;
+}
+
+.income-item__detail {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: 32px;
+}
+
+// ------------------------------------------------
+// recruit-flow
+// ------------------------------------------------
+.recruit-flow {
+  font-family: global.$second-font-family;
+  // <!-- sp style -->
+@include global.mq(sp) {
+  padding: 0 10px;
+  }
+}
+
+.recruit-flow__title {
+  margin-bottom: 16px;
+}
+
+.recruit-flow__lead {
+  font-size: 2.6rem;
+  line-height: 1;
+  color: global.$lightblue;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.recruit-flow__list {
+  margin-bottom: 120px;
+}
+
+.recruit-flow__item {
+  display: flex;
+  width: 100%;
+  height: 128px;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.16);
+}
+
+.recruit-flow__time {
+  position: relative;
+  min-width: 179px;
+  background-color: global.$lightblue;
+  color: global.$white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -21px;
+    transform: translateY(-50%);
+    border: 8px solid transparent;
+    border-left: 14px solid #0071FF;
+  }
+// <!-- sp style -->
+@include global.mq(sp) {
+  min-width: 100px;
+  }
+}
+
+.recruit-flow__schedule {
+  width: 100%;
+  background-color: global.$background-gray;
+  font-size: 2.2rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+}
+
+.recruit-flow__arrow {
+  height: 40px;
+  padding-left: 179px;
+  text-align: center;
+  img {
+    width: 22px;
+    height: 40px;
+  }
+}
+
+
+// ------------------------------------------------
+// recruit-start-flow
+// ------------------------------------------------
+.recruit-start-flow {
+  font-family: global.$second-font-family;
+} 
+
+.recruit-start-flow__title  {
+  margin-bottom: 16px;
+}
+
+.recruit-start-flow__lead {
+  position: relative;
+  text-align: center;
+  font-size: 2.6rem;
+  span {
+    color: global.$red;
+  }
+  img {
+    z-index: -1;
+    position: absolute;
+    width: 135px;
+  }
+  margin-bottom: 48px;
+}
+.recruit-start-flow__list {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 120px;
+// <!-- sp style -->
+@include global.mq(sp) {
+  flex-direction: column;
+  }
+}
+.recruit-start-flow__item { 
+  img {
+    width: 186px;
+  }
+}
+
+.recruit-start-flow__arrow {
+  width: 18px;
+  margin: 6px;
+  img {
+    // <!-- sp style -->
+  @include global.mq(sp) {
+    transform: rotate(90deg);
+    }
+  }
+}
+
+
+// ------------------------------------------------
+// q-and-a
+// ------------------------------------------------
+.q-and-a {
+  font-family: global.$second-font-family;
+// <!-- sp style -->
+@include global.mq(sp) {
+  padding: 0 10px;
+  }
+}
+
+.q-and-a__title {
+  margin-bottom: 56px;
+}
+
+.q-and-a__list {
+  margin-bottom: 120px;
+}
+
+.q-and-a__q{
+  display: flex;
+  width: 100%;
+  padding: 8px 32px;
+  border-radius: 8px;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.16);
+  font-size: 2.2rem;
+  line-height: 40px;
+  font-weight: medium;
+  background-color: global.$background-gray;
+  color: global.$lightblue;
+
+  span {
+    font-size: 3.0rem;
+    font-family: global.$number-font-family;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-right: 19px;
+  }
+  margin-bottom: 24px;
+}
+.q-and-a__a{
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  p {
+    padding-top: 16px;
+  }
+
+  span {
+    color: global.$red;
+    font-size: 3.0rem;
+    font-family: global.$number-font-family;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-right: 19px;
+  }
+  margin-bottom: 24px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    margin-bottom: 120px;
+    }
+}
+
+
+// ------------------------------------------------
+// recruit-job-info
+// ------------------------------------------------
+.recruit-job-info {
+  position: relative;
+  z-index: -10;
+  background-color: global.$background-gray;
+  padding: 80px 0;
+  margin-bottom: 120px;
+}
+.recruit-job-info__title {
+  h3 {
+    background-color: global.$background-gray;
+  }
+  margin-bottom: 56px;
+}
+
+
+// ------------------------------------------------
+// recruit-job-info
+// ------------------------------------------------
+.job-description {
+  // <!-- sp style -->
+@include global.mq(sp) {
+  padding: 0 10px;
+  }
+}
+
+.job-description-job-info__title {
+  margin-bottom: 40px;
+}
+
+.job-description__content {
+  background-image: url(../images/recruit/note.png);
+  padding: 16px 64px;
+  border: solid 2px global.$black;
+  border-radius: 4px;
+  margin-bottom: 120px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 16px 32px;
+  }
+}
+
+.double-quote1 {
+  img {
+    width: 32px;
+    height: 40px;
+  }
+}
+.double-quote2 {
+  width: 32px;
+  margin-left: auto;
+  margin-right: 0px;  
+  img {
+    display: inline-block;
+    width: 32px;
+    height: 40px;
+  }
+}
+
+.job-description__inner {
+  margin: 24px auto;
+  max-width: 928px;
+}
+
+.job-description__head {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: global.$white;
+  border-radius: 4px;
+  background-color: global.$lightblue;
+  padding: 8px 24px;
+  margin-bottom: 16px;
+}
+
+.job-description__text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-left: 24px;
+  margin-bottom: 40px;
+  &.mb20 {
+    margin-bottom: 20px;
+  }
+}
+
+// ------------------------------------------------
+// recruit-form
+// ------------------------------------------------
+.recruit-form {
+  background-color: #EDF2F7;
+  padding: 80px 0;
+  position: relative;
+  // z-index: -1;
+  font-family: global.$second-font-family;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 120px 10px;
+    }
+}
+
+.recruit-form__wrapper {
+  
+}
+.recruit-form__title {
+  h3 {
+    background-color: #EDF2F7;
+  }
+  margin-bottom: 16px;
+}
+
+.recruit-form__head {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 64px;
+  line-height: 1.2;
+}
+
+.recruit-form__note {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: medium;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  text-align: center;
+  img {
+    z-index: -1;
+    position: absolute;
+    bottom: -4px;
+    width: 192px;
+  }
+}
+
+.recruit-form__lead {
+  margin-top: 56px;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: medium;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  text-align: center;
+  img {
+    z-index: -1;
+    position: absolute;
+    bottom: -4px;
+    width: 192px;
+  }
+}
+
+.recruit-form__heading {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
+  span {
+    font-size: 1.4rem;
+    color: global.$red;
+    margin-left: 8px;
+  }
+  margin-bottom: 4px;
+}
+
+.recruit-form__form {
+  input {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    border: solid 1px global.$black;
+    background-color: global.$white;
+    border-radius: 2px;
+  }
+  textarea {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 200px;
+    padding: 8px 16px;
+    border: solid 1px global.$black;
+    background-color: global.$white;
+    border-radius: 2px;
+  }
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.recruit-form__radio {
+  display: flex;
+  margin-left: 16px;
+  align-items: center;
+  input {
+    width: 20px;
+    &:nth-of-type(2) {
+      margin-left: 40px;
+    }
+  }
+  label {
+    font-size: 1.6rem;
+    margin-left: 8px;
+  }
+}
+
+
+// ------------------------------------------------
+// company-description
+// ------------------------------------------------
+.company-description {
+  padding: 120px 0;
+  font-family: global.$second-font-family;
+    // <!-- sp style -->
+@include global.mq(sp) {
+  padding: 120px 10px;
+  }
+}
+
+.company-description__title {
+  margin-bottom: 40px;
+}
+.company-description__table {
+  width: 100%;
+  font-size: 1.6rem;
+}
+.company-description__head {
+  width: 25%;
+  height: 55px;
+  border: solid 1px global.$black;
+  font-weight: bold;
+  background-color: global.$background-gray;
+  text-align: center;
+  line-height: 55px;
+
+
+}
+.company-description__data {
+  width: 75%;
+  border: solid 1px global.$black;
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 16px 32px;
+    // <!-- sp style -->
+    @include global.mq(sp) {
+      padding: 16px 8px;
+      }
+}
+
+.company-description__head--business {
+  line-height: 80px;
+}

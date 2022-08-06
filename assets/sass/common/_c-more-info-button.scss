@@ -1,22 +1,36 @@
 @use '../global/index' as global;
 
 .c-more-info-button {
-  display: block;
   width: 320px;
   height: 64px;
-  margin: 0 auto;
+
   padding: 20px 64px 20px 100px;
   background-color: global.$red;
   color: global.$white;
   font-family: global.$second-font-family;
   border-radius: 30px;
   font-size: 1.6rem;
-  align-items: center;
+    // <!-- tab style -->
+    @include global.mq(sp) {
+      margin: 0 auto;
+      }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  span {
+    display: block;
+  }
+  i {
+    display: block;
+  }
+
   transition: all .2s;
   &:hover {
     opacity: .8;
   }
-
 }
 
 .arrow {
@@ -37,22 +51,77 @@
   }
 }
 
+.c-more-info-button--center {
+  @extend .c-more-info-button;
+  margin: 0 auto;
+}
+
+.c-more-info-button--cta {
+  @extend .c-more-info-button;
+  width: 360px;
+  height: 69px;
+  padding: 24px 40px 24px 56px;
+  font-size: 2.0rem;
+  margin-bottom: 32px;
+  // <!-- tab style -->
+  @include global.mq(tab) {
+    margin: 0 auto 32px;
+  }
+}
+
+
 
 .arrow.arrow-right::before {
   transform: rotate(45deg);
 }
 
-
-.arrow--business {
-  @extend .arrow;
-  &::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-top: solid 2px global.$red;
-    border-right: solid 2px global.$red;
-    position: absolute;
-    left: 10px;
-    top: 8px;
+.c-to-form-button {
+  display: block;
+  width: 320px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 20px 64px 20px 96px;
+  background-color: global.$red;
+  color: global.$white;
+  font-family: global.$second-font-family;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  box-shadow: 0 5px 0 #7F0F14;
+  align-items: center;
+  transition: all .2s;
+  &:hover {
+    background-color: #D43A41;
+    box-shadow: 0 5px 0 #862D31;
+  }
+  a {
+    display: flex;
+    justify-content: space-between;
   }
 }
+
+.c-submit-button {
+  display: block;
+  width: 320px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 20px 0x;
+  background-color: global.$red;
+  color: global.$white;
+  font-family: global.$second-font-family;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  box-shadow: 0 5px 0 #7F0F14;
+  align-items: center;
+  transition: all .2s;
+  text-align: center;
+  margin-top: 40px;
+  &:hover {
+    background-color: #D43A41;
+    box-shadow: 0 5px 0 #862D31;
+  }
+  a {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

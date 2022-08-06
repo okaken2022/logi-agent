@@ -1,0 +1,323 @@
+@use './global/index' as global;
+// ------------------------------------------------
+// company-common
+// ------------------------------------------------
+.company-section-title {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.company-section-title--terms {
+  @extend .company-section-title;
+  margin-bottom: 24px;
+}
+
+// ------------------------------------------------
+// ceo-message
+// ------------------------------------------------
+.ceo-message {
+  font-family: global.$second-font-family;
+  padding: 120px 0;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 120px 10px;
+  }
+}
+
+.ceo-message__content {
+  display: flex;
+  width: 100%;
+  margin-bottom: 80px;
+  @include global.mq(sp) {
+    flex-direction: column;
+  }
+}
+
+.ceo-message__img {
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    margin-bottom: 40px;
+  }
+}
+.ceo-message__text-part {
+  max-width: 512px;
+  margin-left: 32px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    margin-left: 0;
+  }
+}
+.ceo-message__lead {
+  position: relative;
+  font-family: global.$company-font-family;
+  font-size: 2.6rem;
+  line-height: 1.5;
+  img {
+    width: 334px;
+    position: absolute;
+    top: 8px;
+    z-index: -1;
+  }
+  &:nth-of-type(2) {
+    margin-bottom: 40px;
+  }
+}
+.ceo-message__text {
+  font-size: 1.6rem;
+  line-height: 1.625;
+  margin-bottom: 40px;
+}
+
+.ceo-message__signature {
+  width: 100%;
+  text-align: right;
+  img {
+    width: 225px;
+  }
+}
+
+.company-motto {
+  padding: 56px 10px;
+  background-color: global.$background-gray;
+  font-family: global.$company-font-family;
+  text-align: center;
+}
+
+.company-motto__head {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
+
+.company-motto__list {
+  font-size: 2.2rem;
+  line-height: 1.78;
+  text-align: center;
+  max-width: 627px;
+  margin: 0 auto;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    font-size: 1.4rem;
+  }
+}
+
+.company-motto__item {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.company-motto__document {
+  margin-top: 80px;
+  text-align: center;
+  img {
+    max-width: 928px;
+  }
+}
+
+
+// ------------------------------------------------
+// map
+// ------------------------------------------------
+.map {
+  padding: 0 10px;
+  margin-bottom: 120px;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+}
+
+
+// ------------------------------------------------
+// history
+// ------------------------------------------------
+.history {
+  font-family: global.$second-font-family;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 0 10px;
+  }
+  margin-bottom: 160px;
+}
+
+.hitstory__item {
+  width: 100%;
+  display: flex;
+  border-bottom: solid 2px #DEE2E7;
+  &:last-child {
+    border: none;
+  }
+}
+
+.history__year {
+  position: relative;
+  min-width: 227px;
+  padding: 40px 0;
+  img {
+    width: 177px;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 200px;
+    background-color: #D1121B;
+    position: absolute;
+    top: -1px;
+    right: 0;
+  }
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    min-width: 100px;
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.history__year--first {
+  @extend .history__year;
+  &::after {
+    height: 62px;
+    top: 65px;
+  }
+}
+
+.history__year--2019 {
+  @extend .history__year;
+  &::after {
+    height: 350px;
+    top: -1px;
+  }
+}
+
+
+
+.dot-basic {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: global.$red;
+}
+.dot-small {
+  width: 3px;
+  height: 3px;
+  right: -1px;
+}
+
+.dot2 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: 70px;
+}
+.dot3 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: 75px;
+}
+.dot4 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: 80px;
+}
+.dot5 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: 85px;
+}
+.dot6 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: 90px;
+}
+
+.dot7 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: -20px;
+}
+.dot8 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: -25px;
+}
+.dot9 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: -30px;
+}
+.dot10 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: -35px;
+}
+.dot11 {
+  @extend .dot-basic;
+  @extend .dot-small;
+  bottom: -40px;
+}
+
+
+.history__about {
+  display: flex;
+  padding: 51px 0 0 60px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding:40px 0 0 20px;
+  }
+}
+
+
+.history__about span {
+  min-width: 25px;
+  position: relative;
+  color: global.$red;
+  margin-right: 40px;
+    // <!-- sp style -->
+@include global.mq(sp) {
+  margin-right: 20px;
+}
+  &::before {
+    @extend .dot-basic;
+    left: -65px;
+    top: 7px;
+    // <!-- sp style -->
+    @include global.mq(sp) {
+      margin-right: 20px;
+      left: -25px;
+    }
+  }
+}
+
+
+// ------------------------------------------------
+// terms
+// ------------------------------------------------
+.terms {
+  background-color: global.$background-gray;
+  font-family: global.$second-font-family;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  padding: 80px 80px 120px;
+  // <!-- sp style -->
+  @include global.mq(sp) {
+    padding: 80px 20px 80px;
+  }
+}
+
+.terms__box {
+  padding: 32px 16px;
+  width: 100%;
+  height: 800px;
+  background-color: global.$white;
+  border: 1px solid global.$black;
+  overflow-y: scroll;
+}

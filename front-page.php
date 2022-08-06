@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ロジエージェント株式会社</title>
-  <link rel="stylesheet" href="assets/sass/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-</head>
-<body>
-<!-- // ------------------------------------------------
-// header
-// ------------------------------------------------   -->
-  <header class="header">
-    <div class="wrapper-w1187 wrapper-w1187__header">
-      <div class="header__logo">
-        <img src="assets/images/index/logo.png" alt="ロジエージェント株式会社">
-      </div>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item"><a href="#">お仕事情報</a></li>
-          <li class="header__item"><a href="#">事業内容</a></li>
-          <li class="header__item"><a href="#">採用情報</a></li>
-          <li class="header__item"><a href="#">会社案内</a></li>
-          <li class="header__item"><a href="#">お知らせ</a></li>
-          <li class="header-contact__button"><a href="#">お問い合わせ<span><img src="assets/images/index/arrow-right.png" alt=""></span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+<?php get_header();?>
 <!-- // ------------------------------------------------
 // fv
 // ------------------------------------------------   -->
@@ -42,13 +9,13 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="assets/images/index/fv-1.png" alt=""/>
+            <img src="<?php echo get_template_directory_uri();?>/assets/images/index/fv-1.png" alt=""/>
           </div>
           <div class="swiper-slide">
-            <img src="assets/images/index/fv-2.png" alt=""/>
+            <img src="<?php echo get_template_directory_uri();?>/assets/images/index/fv-2.png" alt=""/>
           </div>
           <div class="swiper-slide">
-            <img src="assets/images/index/fv-3.png" alt=""/>
+            <img src="<?php echo get_template_directory_uri();?>/assets/images/index/fv-3.png" alt=""/>
           </div>
         </div>
         <!-- 必要に応じてページネーション -->
@@ -71,10 +38,10 @@
   <!-- ----------------------fv-nav---------------------- -->
       <nav class="fv_nav">
         <ul class="fv-nav__list">
-          <li class="fv-nav__item"><a href="#">個人のお客様<span><img src="assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
-          <li class="fv-nav__item"><a href="#">法人のお客様<span><img src="assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
-          <li class="fv-nav__item"><a href="#">個人ドライバー様<span><img src="assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
-          <li class="fv-nav__item"><a href="#">法人協力会社様<span><img src="assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
+          <li class="fv-nav__item"><a href="#">個人のお客様<span><img src="<?php echo get_template_directory_uri();?>/assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
+          <li class="fv-nav__item"><a href="#">法人のお客様<span><img src="<?php echo get_template_directory_uri();?>/assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
+          <li class="fv-nav__item"><a href="#">個人ドライバー様<span><img src="<?php echo get_template_directory_uri();?>/assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
+          <li class="fv-nav__item"><a href="#">法人協力会社様<span><img src="<?php echo get_template_directory_uri();?>/assets/images/index/Icon feather-arrow-right-circle.png" alt=""></span></a></li>
           <li class="fv-nav-sns">
             <ul class="fv-nav-sns__list">
               <li class="fv-nav-sns__item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -88,8 +55,8 @@
       </nav>
 
   <!-- -------------------fv-catch------------------ -->
-      <div class="wrapper-w1187 wrapper-w1187__fv">
-        <div class="fv__catch">
+      <ul class="wrapper-w1290 wrapper-w1290__fv">
+        <li class="fv__catch">
           <div class="fv__catch-en">
             <p>LET'S MAKE YOUR DREAM COME TRUE TOGETHER!</p>
           </div>
@@ -98,8 +65,31 @@
               働きやすい環境で<br>夢を叶えた社員がたくさんいます。
             </p>
           </div>
-        </div>
-      </div>
+        </li>
+        <li class="fv__catch">
+          <div class="fv__catch-en">
+            <p>THIS SENTENCE IS DAMMIT.</p>
+          </div>
+          <div class="fv__catch-ja">
+            <p>
+              この文章はダミーです<br>
+              二行のテキストイメージ
+            </p>
+          </div>
+        </li>
+        <li class="fv__catch">
+          <div class="fv__catch-en">
+            <p>THIS SENTENCE IS DAMMIT.<br>
+              HERE’S AN IMAGE OF THE SECOND LINE
+            </p>
+          </div>
+          <div class="fv__catch-ja">
+            <p>
+              一行のイメージです
+            </p>
+          </div>
+        </li>
+      </ul>
     </div><!-- /.fv -->
 
 <!-- // ------------------------------------------------
@@ -146,7 +136,7 @@
             </div>
           </li>
         </ul>
-        <div class="job-info__more-info-button c-more-info-button"><a href="#">もっと見る<span class="arrow arrow-right"></span></a></div>
+        <div class="c-more-info-button--center"><a href="#"><span>もっと見る</span><i class="fa-solid fa-angle-right"></i></a></div>
       </div>
     </section><!-- /.job-info -->
 
@@ -163,10 +153,10 @@
           <div class="business__text-part">
             <p class="business-text-part__description1 section-text-part__description">ご指定の場所へのルート配送などの定期便、配送業務を代行する企業専属便、繁忙期のみなどのスポット便、一般貨物輸送便にも対応することが可能です。</p>
             <p class="business-text-part__description2 section-text-part__description">その他、法人様・個人様問わず引っ越しから倉庫保管サービスまで、物流を熟知したロジエージェントならではの、きめ細やかで高品質のな様々なサービスを提供しております。</p>
-            <a href="#" class="business-text-part__button c-more-info-button">詳しく見る<span class="arrow arrow-right"></span></a>
-          </div>
+            <div class="c-more-info-button"><a href="#"><span>詳しく見る</span><i class="fa-solid fa-angle-right"></i></a></div>
+            </div>
           <div class="business__img section__img">
-            <img src="assets/images/index/business.png" alt="">
+            <img src="<?php echo get_template_directory_uri();?>/assets/images/index/business.png" alt="">
           </div>
         </div>
       </div>
@@ -183,13 +173,13 @@
         </h2>
         <div class="recruit__content">
           <div class="recruit__img section__img">
-            <img src="assets/images/index/recruit.png" alt="">
+            <img src="<?php echo get_template_directory_uri();?>/assets/images/index/recruit.png" alt="">
           </div>
           <div class="recruit__text-part">
             <p class="recruit-text-part__lead section-text-part__lead">夢を追いかけている人を<br>応援しています</p>
             <p class="recruit-text-part__description section-text-part__description">高収入・高時給  / 働き方自由 / 未経験者歓迎<br>
               積極的に採用しています。</p>
-            <a href="#" class="recruit-text-part__button c-more-info-button">詳しく見る<span class="arrow arrow-right"></span></a>
+            <div class="c-more-info-button"><a href="#"><span>詳しく見る</span><i class="fa-solid fa-angle-right"></i></a></div>
           </div>
         </div>
       </div>
@@ -208,10 +198,10 @@
           <div class="company__text-part">
             <p class="company-text-part__lead section-text-part__lead">問題解決力こそ、<br>私たちのサービスの本質です</p>
             <p class="company-text-part__description section-text-part__description">私たちロジエージェントは、個人・法人・規模問わず「皆様の身近なエージェント」として配送業務を行っています。</p>
-            <a href="#" class="company-text-part__button c-more-info-button">詳しく見る<span class="arrow arrow-right"></span></a>
+            <div class="c-more-info-button"><a href="#"><span>詳しく見る</span><i class="fa-solid fa-angle-right"></i></a></div>
           </div>
           <div class="company__img section__img">
-            <img src="assets/images/index/company.png" alt="">
+            <img src="<?php echo get_template_directory_uri();?>/assets/images/index/company.png" alt="">
           </div>
         </div>
       </div>
@@ -226,115 +216,48 @@
         <span class="news__title--ja section__title--ja">お知らせ</span>
       </h2>
       <div class="news-article-title">
-        <ul class="news-article-title__list">
-          <li class="news-article-title__item">
-            <time datetime="2018-07-07">2022/04/xx</time>
-            <h3>タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-          </li>
-          <li class="news-article-title__item">
-            <time datetime="2018-07-07">2022/04/xx</time>
-            <h3>タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-          </li>
-          <li class="news-article-title__item">
-            <time datetime="2018-07-07">2022/04/xx</time>
-            <h3>タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-          </li>
-          <!-- <li class="news-article-title__item">
-            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            <h3><?php the_title(); ?></h3>
-          </li>
-          <li class="news-article-title__item">
-            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            <h3><?php the_title(); ?></h3>
-          </li>
-          <li class="news-article-title__item">
-            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            <h3><?php the_title(); ?></h3>
-          </li> -->
-        </ul>
+        <?php query_posts('posts_per_page=3'); ?>
+        <?php if(have_posts()):?>
+          <ul class="news-article-title__list">
+            <?php while(have_posts()):the_post();?>
+            <li class="news-article-title__item">
+              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
+              <div class="cat--item">
+                <?php the_category();?>
+              </div>
+              <a href="<?php the_permalink();?>">
+                <h3><?php the_title(); ?></h3>
+              </a>
+            </li>
+            <?php endwhile;?>
+          </ul>
+        <?php endif;?>
       </div>
     </section>
 
 <!-- // ------------------------------------------------
 // cta
 // ------------------------------------------------   -->
-    <section class="main-cta">
+    <section class="main-cta wrapper-w1290">
       <div class="main-cta__img">
-        <img src="assets/images/index/cta.png" alt="">
+        <img src="<?php echo get_template_directory_uri();?>/assets/images/index/cta.png" alt="">
       </div>
       <div class="main-cta__text-part">
-        <h3 class="main-cta__heading">お困りの際はお気軽にご相談ください。</h3>
+        <div class="main-cta__heading">
+          <h3>お困りの際は<br class="respond">お気軽にご相談ください。</h3>
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/index/line-w494.png" alt="">
+        </div>
         <p class="main-cta__lead">ロジエージェントは軽貨物のプロフェッショナルエージェントとして、<br>
           日々お客様満足のために全力疾走しています。</p>
-        <a href="" class="c-more-info-button more-info-button--cta">フォームでのお問い合わせ<span class="arrow arrow-right arrow-cta"></span></a>
+        <div class="c-more-info-button--cta"><a href="#"><span>フォームでのお問い合わせ</span><i class="fa-solid fa-angle-right"></i></a></div>
         <div class="main-cta__contact">
           <p class="main-cta__contact-text">お電話・FAXでのお問い合わせ</p>
           <div class="main-cta__contact-unit">
-            <a href="" class="main-cta__tel"><span><img src="assets/images/index/icon-tel.png" alt=""></span>03-5667-0305</a>
-            <a href="" class="main-cta__fax"><span><img src="assets/images/index/icon-fax.png" alt=""></span>03-5667-0306</a>
+            <a href="" class="main-cta__tel"><span><img src="<?php echo get_template_directory_uri();?>/assets/images/index/icon-tel.png" alt=""></span>03-5667-0305</a>
+            <a href="" class="main-cta__fax"><span><img src="<?php echo get_template_directory_uri();?>/assets/images/index/icon-fax.png" alt=""></span>03-5667-0306</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-
-<!-- // ------------------------------------------------
-// footer
-// ------------------------------------------------   -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="wrapper-w1088 wrapper__footer">
-        <div class="footer__logo-part">
-          <div class="footer__logo">
-            <img src="assets/images/index/logo.png" alt="">
-          </div>
-          <p class="footer__address">〒134-0085<br>
-            東京都江戸川区南葛西3-10-12　1F</p>
-          <p class="footer__tel">Tel. 03-5667-0305</p>
-          <p class="footer__fax">Fax. 03-5667-0306</p>
-        </div>
-        <div class="footer-nav">
-          <div class="footer-nav__col">
-            <span class="footer-nav__head">事業内容</span>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item"><a href="#">企業専属便</a></li>
-              <li class="footer-nav__item"><a href="#">スポット便</a></li>
-              <li class="footer-nav__item"><a href="#">一般貨物輸送便</a></li>
-              <li class="footer-nav__item"><a href="#">その他のサービス</a></li>
-            </ul>
-          </div>
-          <div class="footer-nav__col">
-            <span class="footer-nav__head">会社案内</span>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item"><a href="#">社長メッセージ</a></li>
-              <li class="footer-nav__item"><a href="#">社訓</a></li>
-              <li class="footer-nav__item"><a href="#">会社詳細</a></li>
-              <li class="footer-nav__item"><a href="#">アクセス</a></li>
-            </ul>
-          </div>
-          <div class="footer-nav__col">
-            <span class="footer-nav__head"><a href="#">お仕事情報</a></span>
-            <span class="footer-nav__head"><a href="#">採用情報</a></span>
-            <span class="footer-nav__head"><a href="#">お知らせ</a></span>
-            <span class="footer-nav__head"><a href="#">お問い合わせ</a></span>
-            <span class="footer-nav__agreement">貨物軽自動車運送約款</span>
-            <ul class="footer-nav__sns-links">
-              <li class="footer-nav__sns-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-              <li class="footer-nav__sns-item"><a href="#"><i class="fa-brands fa-facebook-square"></i></a></li>
-              <li class="footer-nav__sns-item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-              <li class="footer-nav__sns-item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-              <li class="footer-nav__sns-item"><a href="#"><i class="fa-brands fa-line"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Copyright © 2022ロジエージェント株式会社 All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+<?php get_footer();?>

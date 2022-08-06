@@ -5,7 +5,19 @@
   margin: 0 auto;
 }
 
-.wrapper-w1187 {
-  max-width: 1187px;
+.wrapper-w1290 {
+  max-width: 1290px;
   margin: 0 auto;
+}
+.wrapper-w814 {
+  max-width: 814px;
+  margin: 0 auto;
+}
+.wrapper-w242 {
+  max-width: 242px;
+  margin: 0 auto;
+  // <!-- tab style -->
+  @include global.mq(sp) {
+    display: none;
+  }
 }

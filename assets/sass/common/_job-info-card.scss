@@ -1,0 +1,66 @@
+@use '../global/index' as global;
+// ------------------------------------------------
+// job-info-card
+// ------------------------------------------------
+.job-info__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  // <!-- tab style -->
+  @include global.mq(tab) {
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+}
+
+.job-info__card {
+  width: 332px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: global.$white;
+  border: solid 1px global.$card-border-gray;
+  // <!-- tab style -->
+  @include global.mq(tab) {
+    margin-bottom: 40px;
+  }
+}
+
+.job-info-card__img {
+  width: 97px;
+  height: 97px;
+  border: solid 1px global.$red;
+}
+
+.job-info-card__text-part {
+  width: 198px;
+  text-align: left;
+  margin-top: 2px;
+}
+
+.job-info-card-text-part__title {
+  font-family: global.$second-font-family;
+  font-size: 1.8rem;
+  color: global.$lightblue;
+  margin-bottom: 32px;
+}
+
+.job-info-card-text-part__detail {
+  width: 160px;
+  font-size: 1.4rem;
+  margin-bottom: 45px;
+}
+
+.job-info-card-text-part__button {
+  width: 189px;
+  text-align: center;
+  display: block;
+  background-color: global.$white;
+  color: global.$red;
+  padding: 10px 52px 8px;
+  border: solid 1px global.$red;
+}
+
+
